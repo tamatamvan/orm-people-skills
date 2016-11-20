@@ -8,11 +8,23 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      peopleId: {
-        type: Sequelize.INTEGER
+      MutantId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'People',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL'
       },
-      skillId: {
-        type: Sequelize.INTEGER
+      SkillId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Skills',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL'
       },
       skillpoint: {
         type: Sequelize.INTEGER

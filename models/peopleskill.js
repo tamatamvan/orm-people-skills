@@ -1,9 +1,25 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var PeopleSkill = sequelize.define('PeopleSkill', {
-    peopleId: DataTypes.INT,
-    skillId: DataTypes.INT,
-    skillpoint: DataTypes.INT
+    peopleId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'People',
+        key: 'id'
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'SET NULL'
+    },
+    skillId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Skills',
+        key: 'id'
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'SET NULL'
+    },
+    skillpoint: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
