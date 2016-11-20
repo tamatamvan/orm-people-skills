@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
         // associations can be defined here
         Skill.belongsToMany(models.People, {
           through: 'PeopleSkill',
-          foreignKey: 'SkillId'
+          foreignKey: 'skillId'
         })
       }
     }
