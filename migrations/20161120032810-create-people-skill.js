@@ -9,13 +9,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       peopleId: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER
       },
       skillId: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER
       },
       skillpoint: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
